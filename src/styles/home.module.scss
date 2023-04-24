@@ -1,0 +1,87 @@
+@import "./sample.module.scss";
+$hero-yp: 1rem;
+$space-big: 1.8rem;
+$container-px: 5rem;
+$heading: 2.8rem;
+%pb {
+  padding-bottom: 1.5rem;
+}
+.container {
+  padding-left: $container-px;
+  padding-right: $container-px;
+}
+.hero {
+  padding-top: $hero-yp;
+  padding-bottom: $hero-yp;
+  @include flex;
+  div h1 {
+    font-size: 5rem;
+    width: 70%;
+    line-height: 5rem;
+    color: $primary-color;
+    font-family: $upwork-sans;
+    @extend %pb;
+    @extend %bold;
+  }
+  div h4 {
+    font-size: 1.4rem;
+    width: 70%;
+    color: #5e6d55;
+    @extend %pb;
+    @extend %bold;
+  }
+}
+.trust {
+  margin-top: 4.5rem;
+  p {
+    color: #9aaa97;
+    @extend %bold;
+  }
+}
+// another one
+
+.aList {
+  @include flex;
+  margin-top: $space-big;
+  margin-bottom: $space-big;
+  .wordContainer {
+    margin-left: 1rem;
+  }
+  div h2 {
+    font-size: 1.2rem;
+    display: block;
+    line-height: 1.4rem;
+    font-weight: 500;
+  }
+  div h4 {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+}
+.sections {
+  @include flex;
+  padding-top: $space-big;
+  padding-bottom: $space-big;
+  align-items: center;
+  .sectionOne {
+    width: 40%;
+    height: 26rem;
+    background-color: $border-color;
+    border-radius: 6px;
+  }
+  .sectionTwo {
+    h1 {
+      font-size: $heading;
+      font-family: $upwork-sans;
+      line-height: $heading;
+      @extend %bold;
+    }
+    .btnContainer {
+      @include flex;
+    }
+  }
+}
+
+.separatorX {
+  width: 2rem;
+}

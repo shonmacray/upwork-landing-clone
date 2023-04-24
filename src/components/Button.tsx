@@ -2,18 +2,22 @@ import headerStyles from "../styles/sample.module.scss";
 interface Props {
   right?: JSX.Element;
   label: string;
-  covered?: boolean;
+  type?: string;
 }
 
 export default function AppButton({
   right,
   label = "button",
-  covered = false,
+  type = "",
 }: Props): JSX.Element {
   return (
     <button
       className={`${headerStyles.talent} ${headerStyles.btn} ${
-        covered && headerStyles.btnPrimary
+        type === "covered"
+          ? headerStyles.btnPrimary
+          : type === "outline"
+          ? headerStyles.btnOutline
+          : null
       }`}
     >
       <p>{label}</p> {right}

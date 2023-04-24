@@ -42,7 +42,7 @@ export default function SiteHeader({ children }: Props): JSX.Element {
             />
           </div>
           <AppButton label="Log In" />
-          <AppButton label="Sign Up" covered />
+          <AppButton label="Sign Up" type="covered" />
         </div>
       </div>
       <div className={headerStyles.subMain}>

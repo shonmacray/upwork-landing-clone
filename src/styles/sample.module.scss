@@ -7,6 +7,7 @@ $primary-color: #14a900;
 $text-color: #011e00;
 $justify-between: space-between;
 $justify-center: center;
+$upwork-sans: "Times New Roman", Times, serif !important;
 
 @mixin flex($flex: row, $justify: "") {
   display: flex;
@@ -27,7 +28,9 @@ $justify-center: center;
   font-weight: 500;
   font-size: 0.9rem;
 }
-
+%bold {
+  font-weight: 600;
+}
 .mainHeader {
   border-bottom: 1px solid $border-color;
   @include flex(row, $justify-between);
@@ -45,6 +48,8 @@ $justify-center: center;
   @extend %space-r;
   font-size: x-large;
   color: $primary-color;
+  font-family: $upwork-sans;
+  @extend %bold;
 }
 .list {
   @include flex;
@@ -97,10 +102,17 @@ $justify-center: center;
   border-radius: 50px;
   padding-left: 1rem;
   padding-right: 1rem;
+  @extend %bold;
 }
 .btnPrimary {
   background-color: $primary-color;
   color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.btnOutline {
+  color: $primary-color;
+  border: 2px solid $primary-color;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
