@@ -1,0 +1,8 @@
+$justify-between: space-between;
+$justify-center: space-center;
+
+.mainHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-between;
+}
