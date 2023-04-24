@@ -1,4 +1,7 @@
 import headerStyles from "../styles/sample.module.scss";
+import { FiSearch } from "react-icons/fi";
+import { HiChevronDown } from "react-icons/hi";
+import AppButton from "./Button";
 
 interface Props {
   children: JSX.Element;
@@ -17,23 +20,33 @@ export default function SiteHeader({ children }: Props): JSX.Element {
     <div>
       <div className={headerStyles.mainHeader}>
         <div className={headerStyles.branding}>
-          <h1>Upwork</h1>
+          <h1 className={headerStyles.siteBrand}>Upwork</h1>
           <div>
-            <ul>
+            <ul className={headerStyles.list}>
               {mainLinks.map((link) => (
-                <li key={link}>{link}</li>
+                <li key={link}>
+                  {link} <HiChevronDown />
+                </li>
               ))}
             </ul>
           </div>
         </div>
-        <div>
-          <div>search</div>
-          <button>Login</button>
-          <button>Signup</button>
+        <div className={headerStyles.right}>
+          <div className={headerStyles.search}>
+            <FiSearch size={20} />
+            <input placeholder="Search" />
+            <div className={headerStyles.separator} />
+            <AppButton
+              label="Talent"
+              right={<HiChevronDown className={headerStyles.chevron} />}
+            />
+          </div>
+          <AppButton label="Log In" />
+          <AppButton label="Sign Up" covered />
         </div>
       </div>
-      <div>
-        <ul>
+      <div className={headerStyles.subMain}>
+        <ul className={headerStyles.moreList}>
           {moreLinks.map((link) => (
             <li key={link}>{link}</li>
           ))}

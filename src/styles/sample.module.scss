@@ -1,8 +1,111 @@
+$px: 2rem;
+$list-px: 1.2rem;
+$header-height: 4rem;
+$btnpaddng: 1.5rem !important;
+$border-color: #e4ebe3;
+$primary-color: #14a900;
+$text-color: #011e00;
 $justify-between: space-between;
-$justify-center: space-center;
+$justify-center: center;
+
+@mixin flex($flex: row, $justify: "") {
+  display: flex;
+  flex-direction: $flex;
+  justify-content: $justify;
+}
+
+%space-x {
+  padding-left: $px;
+  padding-right: $px;
+}
+%space-r {
+  padding-right: $list-px;
+}
+%headers-height {
+  height: $header-height;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
 
 .mainHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: $justify-between;
+  border-bottom: 1px solid $border-color;
+  @include flex(row, $justify-between);
+  @extend %headers-height;
+  @extend %space-x;
+}
+.subMain {
+  @extend %space-x;
+}
+.branding {
+  @include flex;
+  align-items: center;
+}
+.siteBrand {
+  @extend %space-r;
+  font-size: x-large;
+  color: $primary-color;
+}
+.list {
+  @include flex;
+  li {
+    @extend %space-r;
+    @include flex;
+    align-items: center;
+  }
+}
+.right {
+  height: 100%;
+  align-items: center;
+  @include flex;
+}
+.moreList {
+  @include flex;
+  @extend %headers-height;
+  li {
+    @extend %space-r;
+  }
+}
+.search {
+  border: 2px solid $border-color;
+  height: 65%;
+  border-radius: 50rem;
+  align-items: center;
+  padding-left: 1rem;
+  input:active,
+  input:focus {
+    outline: 0;
+  }
+  input::placeholder {
+    color: $text-color;
+  }
+  input {
+    background: none;
+    padding-left: 0.5rem;
+  }
+  .talent {
+    align-items: center;
+    @include flex;
+    .chevron {
+      margin-left: 0.3rem;
+    }
+  }
+  @include flex;
+}
+.btn {
+  height: 2.59rem;
+  border-radius: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.btnPrimary {
+  background-color: $primary-color;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.separator {
+  background: $border-color;
+  width: 1px;
+  height: 70%;
 }
