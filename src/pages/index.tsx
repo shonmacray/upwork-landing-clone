@@ -9,6 +9,7 @@ import { AiFillStar } from "react-icons/ai";
 
 import { categories } from "@/utils";
 import ListWithIcon2 from "@/components/ListWithIcon2";
+import Card from "@/components/Card";
 
 const inter = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -201,6 +202,29 @@ export default function Home() {
               <p>Explore different ways to earn</p>
             </div>
             <AppButton type="blue" label="Find Opportunites" />
+          </div>
+        </div>
+      </div>
+      <div className={homeStyles.sliderContainer}>
+        <h1>Trusted by leading brands and startups</h1>
+        <div className={homeStyles.slider}>
+          <Card
+            title="“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”"
+            subTitle="Josh Machiz, Chief Digital Officer"
+            icon={<div>as</div>}
+          />
+          <Card
+            title="“One of the advantages of utilizing freelancers is finding talent with different skills quickly as our needs change.”"
+            subTitle="Carol Taylor, Director of Content Experience"
+            icon={<div>as</div>}
+            num={2}
+          />
+          <div className={homeStyles.card2}>
+            <div className={homeStyles.one}>dd</div>
+            <div className={homeStyles.two}>
+              <h4>And many more</h4>
+              <h4>icon</h4>
+            </div>
           </div>
         </div>
       </div>
