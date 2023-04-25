@@ -34,6 +34,10 @@ $upwork-sans: "Times New Roman", Times, serif !important;
 %semi-bold {
   font-weight: 500;
 }
+%btnpadding {
+  padding-left: 1.7rem !important;
+  padding-right: 1.7rem !important;
+}
 .mainHeader {
   border-bottom: 1px solid $border-color;
   @include flex(row, $justify-between);
@@ -110,14 +114,22 @@ $upwork-sans: "Times New Roman", Times, serif !important;
 .btnPrimary {
   background-color: $primary-color;
   color: #fff;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  @extend %btnpadding;
 }
 .btnOutline {
   color: $primary-color;
   border: 2px solid $primary-color;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  @extend %btnpadding;
+}
+.btnGreen {
+  color: #12544e;
+  background-color: #fff;
+  @extend %btnpadding;
+}
+.btnBlue {
+  color: #2057c3;
+  background-color: #fff;
+  @extend %btnpadding;
 }
 .separator {
   background: $border-color;

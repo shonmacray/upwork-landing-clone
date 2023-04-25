@@ -6,6 +6,7 @@ import { BiEdit } from "react-icons/bi";
 import { TiPinOutline } from "react-icons/ti";
 import { RiShieldStarLine } from "react-icons/ri";
 import { AiFillStar } from "react-icons/ai";
+import { AiOutlineCheckSquare } from "react-icons/ai";
 
 import { categories } from "@/utils";
 
@@ -73,6 +74,35 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </div>
+      <div className={homeStyles.sectionFour}>
+        <div className={homeStyles.enter}>
+          <h4>Enterprise Suite</h4>
+          <h1>
+            <span>This is how</span>
+            <br /> good companies find good company.
+          </h1>
+          <p>
+            Access the top 1% of talent on Upwork, and a full suite of hybrid
+            workforce management tools. This is how innovation works now.
+          </p>
+          <div className={homeStyles.listContainer}>
+            <div className={homeStyles.listWithIcon}>
+              <RiShieldStarLine size={22} color="#91e6b3" />
+              <p>Access expert talent to fill your skill gaps</p>
+            </div>
+            <div className={homeStyles.listWithIcon}>
+              <BiEdit size={22} color="#91e6b3" />
+              <p>Control your workflow: hire, classify and pay your talent</p>
+            </div>
+            <div className={homeStyles.listWithIcon}>
+              <TiPinOutline size={22} color="#91e6b3" />
+              <p>Partner with Upwork for end-to-end support</p>
+            </div>
+          </div>
+          <AppButton type="green" label="Learn more" />
+        </div>
+        <div className={homeStyles.image2}></div>
       </div>
     </main>
   );

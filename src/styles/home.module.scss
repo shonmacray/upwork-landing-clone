@@ -11,6 +11,10 @@ $heading: 2.8rem;
   font-family: $upwork-sans;
   line-height: $heading;
 }
+%container-margin {
+  margin-top: $space-big;
+  margin-bottom: $space-big;
+}
 .container {
   padding-left: $container-px;
   padding-right: $container-px;
@@ -47,8 +51,7 @@ $heading: 2.8rem;
 
 .aList {
   @include flex;
-  margin-top: $space-big;
-  margin-bottom: $space-big;
+  @extend %container-margin;
   .wordContainer {
     margin-left: 1rem;
   }
@@ -65,8 +68,7 @@ $heading: 2.8rem;
 }
 .sections {
   @include flex;
-  margin-top: $space-big;
-  margin-bottom: $space-big;
+  @extend %container-margin;
   align-items: center;
   .sectionOne {
     width: 40%;
@@ -89,8 +91,7 @@ $heading: 2.8rem;
 }
 
 .sectionThree {
-  margin-top: $space-big;
-  margin-bottom: $space-big;
+  @extend %container-margin;
   .looking {
     color: #5e6d55;
     @extend %semi-bold;
@@ -135,6 +136,56 @@ $heading: 2.8rem;
       .icon {
         color: $primary-color;
       }
+    }
+  }
+}
+
+.sectionFour {
+  background: #12544e;
+  border-radius: 6px;
+  height: 38rem;
+  @extend %container-margin;
+  @include flex;
+  .image2 {
+    width: 40%;
+    background-color: #91e6b3;
+  }
+  .enter {
+    width: 60%;
+    padding: 2.1rem 2rem;
+  }
+  .listContainer {
+    margin-top: $hero-yp;
+    margin-bottom: $hero-yp;
+  }
+  h4 {
+    font-size: 1.4rem;
+    @extend %semi-bold;
+    color: #f8faf7;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: 4rem;
+    font-family: $upwork-sans;
+    line-height: 3.8rem;
+    width: 79%;
+    color: #91e6b3;
+    margin-bottom: 1.6rem;
+    @extend %bold;
+    span {
+      color: #f8faf7;
+    }
+  }
+  p {
+    color: #f8faf7;
+    font-size: 1.2rem;
+  }
+  .listWithIcon {
+    @include flex;
+    align-items: center;
+    padding-bottom: 0.6rem;
+    p {
+      margin-left: 1rem;
     }
   }
 }

@@ -17,10 +17,14 @@ export default function AppButton({
           ? headerStyles.btnPrimary
           : type === "outline"
           ? headerStyles.btnOutline
+          : type === "green"
+          ? headerStyles.btnGreen
+          : type === "blue"
+          ? headerStyles.btnBlue
           : null
       }`}
     >
-      <p>{label}</p> {right}
+      <div>{label}</div> {right}
     </button>
   );
 }
