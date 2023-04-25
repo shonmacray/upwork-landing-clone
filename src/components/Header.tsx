@@ -4,15 +4,11 @@ import { HiChevronDown } from "react-icons/hi";
 import AppButton from "./Button";
 import { categories } from "@/utils";
 
-interface Props {
-  children: JSX.Element;
-}
-
-export default function SiteHeader({ children }: Props): JSX.Element {
+export default function SiteHeader(): JSX.Element {
   const mainLinks = ["Find Talent", "Find Work", "Why Upwork", "Enterprise"];
 
   return (
-    <div>
+    <div className={headerStyles.header}>
       <div className={headerStyles.mainHeader}>
         <div className={headerStyles.branding}>
           <h1 className={headerStyles.siteBrand}>Upwork</h1>
@@ -47,7 +43,6 @@ export default function SiteHeader({ children }: Props): JSX.Element {
           ))}
         </ul>
       </div>
-      {children}
     </div>
   );
 }

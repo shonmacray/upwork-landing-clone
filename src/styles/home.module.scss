@@ -282,7 +282,7 @@ $heading: 2.8rem;
     justify-content: $justify-between;
     .left {
       background-color: #f2f7f2;
-      border-radius: 0 0 6px 6px;
+      border-radius: 6px;
       width: 64%;
       height: 40rem;
       padding-top: 5rem;
@@ -297,7 +297,7 @@ $heading: 2.8rem;
     }
     .right {
       background-color: $primary-color;
-      border-radius: 0 0 6px 6px;
+      border-radius: 6px;
       padding-top: 15rem;
       width: 33%;
       height: 40rem;
@@ -402,7 +402,7 @@ $heading: 2.8rem;
     line-height: 4.6rem;
     @extend %bold;
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
 }
 .slider {
@@ -450,7 +450,6 @@ $heading: 2.8rem;
     padding-bottom: 2.5rem;
   }
 }
-
 .skillList {
   @extend %container-margin;
   h1 {

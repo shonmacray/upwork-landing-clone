@@ -44,6 +44,11 @@ $upwork-sans: "Times New Roman", Times, serif !important;
   @extend %headers-height;
   @extend %space-x;
 }
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+}
 .subMain {
   @extend %space-x;
 }
@@ -135,4 +140,11 @@ $upwork-sans: "Times New Roman", Times, serif !important;
   background: $border-color;
   width: 1px;
   height: 70%;
+}
+
+.space {
+  height: 1rem;
+}
+.space1 {
+  height: 1px;
 }
