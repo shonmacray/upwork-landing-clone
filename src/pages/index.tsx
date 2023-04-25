@@ -6,9 +6,9 @@ import { BiEdit } from "react-icons/bi";
 import { TiPinOutline } from "react-icons/ti";
 import { RiShieldStarLine } from "react-icons/ri";
 import { AiFillStar } from "react-icons/ai";
-import { AiOutlineCheckSquare } from "react-icons/ai";
 
 import { categories } from "@/utils";
+import ListWithIcon2 from "@/components/ListWithIcon2";
 
 const inter = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -103,6 +103,85 @@ export default function Home() {
           <AppButton type="green" label="Learn more" />
         </div>
         <div className={homeStyles.image2}></div>
+      </div>
+      <div className={homeStyles.forClients}>
+        <div>
+          <h4>For clients</h4>
+        </div>
+        <div className={homeStyles.sectionTwo}>
+          <h1 className={homeStyles.h1}>Find talent your way</h1>
+          <p className={homeStyles.p}>
+            Work with the largest network of independent professionals and get
+            things done—from quick turnarounds to big transformations.
+          </p>
+          <div className={homeStyles.listContainer}>
+            <div className={homeStyles.card1}>
+              <h1>Post a job and hire a pro</h1>
+              <div className={homeStyles.iconContainer}>
+                <p>Talent Marketplace</p>
+                <AiFillStar className={homeStyles.icon} size={23} />
+              </div>
+            </div>
+            <div className={homeStyles.card1}>
+              <h1>Browse and buy projects</h1>
+              <div className={homeStyles.iconContainer}>
+                <p>Talent Marketplace</p>
+                <AiFillStar className={homeStyles.icon} />
+              </div>
+            </div>
+            <div className={homeStyles.card1}>
+              <h1 className={homeStyles.longWords}>
+                Let us help you find the right talent
+              </h1>
+              <div className={homeStyles.iconContainer}>
+                <p>Talent Marketplace</p>
+                <AiFillStar className={homeStyles.icon} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={homeStyles.why}>
+        <div className={homeStyles.inner}>
+          <div className={homeStyles.left}>
+            <h1 className={homeStyles.h1}>Why businesses turn to Upwork</h1>
+            <ListWithIcon2
+              title="Proof of quality"
+              subTitle="Check any pro’s work samples, client reviews, and identity verification."
+              icon={<RiShieldStarLine size={26} />}
+            />
+            <ListWithIcon2
+              title="No cost until you hire"
+              subTitle="Interview potential fits for your job, negotiate rates, and only pay for work you approve."
+              icon={<RiShieldStarLine size={26} />}
+            />
+            <ListWithIcon2
+              title="Safe and secure"
+              subTitle="Focus on your work knowing we help protect your data and privacy. We’re here with 24/7 support if you need it."
+              icon={<RiShieldStarLine size={26} />}
+            />
+          </div>
+          <div className={homeStyles.right}>
+            <div>
+              <h1>
+                We’re
+                <br /> the world’s work makertplace
+              </h1>
+              <ListWithIcon2
+                light
+                title="4.9/5"
+                subTitle="Clients rate professionals on Upwork"
+                icon={<AiFillStar size={50} />}
+              />
+              <ListWithIcon2
+                light
+                title="Award winner"
+                subTitle="G2’s 2021 Best Software Awards"
+                icon={<RiShieldStarLine size={50} />}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );

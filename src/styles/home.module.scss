@@ -12,8 +12,8 @@ $heading: 2.8rem;
   line-height: $heading;
 }
 %container-margin {
-  margin-top: $space-big;
-  margin-bottom: $space-big;
+  margin-top: $space-big !important;
+  margin-bottom: $space-big !important;
 }
 .container {
   padding-left: $container-px;
@@ -54,6 +54,26 @@ $heading: 2.8rem;
   @extend %container-margin;
   .wordContainer {
     margin-left: 1rem;
+    .h2 {
+      font-size: 2.1rem;
+    }
+    .h4 {
+      margin-top: 1rem;
+      font-size: 1rem;
+      @extend %semi-bold;
+      color: #5e6d55;
+      width: 65%;
+    }
+  }
+  .wordContainer2 {
+    .h22 {
+      @extend %bold;
+    }
+    .h44 {
+      color: #f8faf7 !important;
+      font-weight: 400 !important;
+      width: 100%;
+    }
   }
   div h2 {
     font-size: 1.2rem;
@@ -186,6 +206,108 @@ $heading: 2.8rem;
     padding-bottom: 0.6rem;
     p {
       margin-left: 1rem;
+    }
+  }
+}
+
+.forClients {
+  background-color: #5e6d55;
+  padding: 2rem;
+  border-radius: 6px;
+  height: 40rem;
+  @include flex(column);
+  @extend %container-margin;
+  justify-content: $justify-between;
+  div h4 {
+    font-size: 1.4rem;
+    color: #f8faf7;
+  }
+  .sectionTwo {
+    .p {
+      width: 43%;
+      font-size: 1.2rem;
+      color: #f8faf7;
+      margin-top: 1rem;
+    }
+    .h1 {
+      font-size: 5rem;
+      width: 32%;
+      line-height: 5rem;
+      color: #f8faf7;
+      @extend %bold;
+      font-family: $upwork-sans;
+    }
+  }
+  .listContainer {
+    @include flex;
+    justify-content: $justify-between;
+    margin-top: $space-big;
+    .card1 {
+      height: 10rem;
+      border-radius: 6px;
+      background-color: $primary-color;
+      width: 31.7%;
+      color: #f8faf7;
+      padding: 1.2rem;
+      h1 {
+        font-size: 2.5rem;
+        width: 70%;
+        line-height: 2.4rem;
+        @extend %semi-bold;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      .longWords {
+        width: 100%;
+      }
+      .iconContainer {
+        @include flex;
+        align-items: center;
+        margin-top: 1rem;
+      }
+    }
+    .card1:hover {
+      background-color: #f8faf7;
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+}
+
+.why {
+  .inner {
+    @include flex;
+    justify-content: $justify-between;
+    .left {
+      background-color: #f2f7f2;
+      border-radius: 0 0 6px 6px;
+      width: 64%;
+      height: 40rem;
+      padding-top: 5rem;
+      padding-left: 2rem;
+      .h1 {
+        font-size: 5rem;
+        font-family: $upwork-sans;
+        width: 75%;
+        line-height: 4.6rem;
+        @extend %bold;
+      }
+    }
+    .right {
+      background-color: $primary-color;
+      border-radius: 0 0 6px 6px;
+      padding-top: 15rem;
+      width: 33%;
+      height: 40rem;
+      color: #f8faf7 !important;
+      padding-left: 2rem;
+      div h1 {
+        font-size: 2rem;
+        line-height: 1.9rem;
+        width: 65%;
+        @extend %bold;
+      }
     }
   }
 }
