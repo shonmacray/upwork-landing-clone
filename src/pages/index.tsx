@@ -228,6 +228,23 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={homeStyles.support}>
+        <h1>We support Ukraine</h1>
+        <p>
+          We are taking action to help our freelancers, our clients, and the
+          people of Ukraine—and so can you.
+        </p>
+        <AppButton type="outline" label="Learn more" />
+      </div>
+      <div className={homeStyles.skillList}>
+        <div>
+          <h1>Top skills</h1>
+          <h1>Trending skills</h1>
+          <h1>Top skills in US</h1>
+          <h1>Project CatalogTM</h1>
+        </div>
+        <div></div>
+      </div>
     </main>
   );
 }
