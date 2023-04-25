@@ -183,6 +183,27 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className={homeStyles.forTalent}>
+        <div className={homeStyles.talentLeft}></div>
+        <div className={homeStyles.talentRight}>
+          <div>
+            <h4>For talent</h4>
+            <h1>Find great work</h1>
+            <p>
+              Meet clients you’re excited to work with and take your career or
+              business to new heights.
+            </p>
+          </div>
+          <div>
+            <div className={homeStyles.listn}>
+              <p>Find opportunities for every stage of your freelance career</p>
+              <p>Control when, where, and how you work</p>
+              <p>Explore different ways to earn</p>
+            </div>
+            <AppButton type="blue" label="Find Opportunites" />
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

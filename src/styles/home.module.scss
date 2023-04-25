@@ -1,7 +1,7 @@
 @import "./sample.module.scss";
 $hero-yp: 1rem;
 $space-big: 2rem;
-$container-px: 5rem;
+$container-px: 4rem;
 $heading: 2.8rem;
 %pb {
   padding-bottom: 1.5rem;
@@ -276,6 +276,7 @@ $heading: 2.8rem;
 }
 
 .why {
+  @extend %container-margin;
   .inner {
     @include flex;
     justify-content: $justify-between;
@@ -308,6 +309,47 @@ $heading: 2.8rem;
         width: 65%;
         @extend %bold;
       }
+    }
+  }
+}
+
+.forTalent {
+  @include flex();
+  @extend %container-margin;
+  .talentLeft {
+    width: 50%;
+    height: 42rem;
+    background-color: #91e6b3;
+  }
+  .talentRight {
+    width: 50%;
+    background-color: #2057c3;
+    height: 42rem;
+    padding: 2rem;
+    @include flex(column);
+    justify-content: $justify-between;
+    color: #f8faf7;
+    div h4 {
+      font-size: 1.4rem;
+    }
+    div h1 {
+      font-size: 5rem;
+      font-family: $upwork-sans;
+      width: 70%;
+      line-height: 4.6rem;
+      @extend %bold;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    div p {
+      font-size: 1.1rem;
+      width: 70%;
+    }
+    .listn {
+      @include flex();
+      border-top: 1px solid #f8faf7;
+      padding-top: 1rem;
+      padding-bottom: 2.4rem;
     }
   }
 }
