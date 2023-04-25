@@ -2,6 +2,7 @@ import headerStyles from "../styles/sample.module.scss";
 import { FiSearch } from "react-icons/fi";
 import { HiChevronDown } from "react-icons/hi";
 import AppButton from "./Button";
+import { categories } from "@/utils";
 
 interface Props {
   children: JSX.Element;
@@ -9,13 +10,7 @@ interface Props {
 
 export default function SiteHeader({ children }: Props): JSX.Element {
   const mainLinks = ["Find Talent", "Find Work", "Why Upwork", "Enterprise"];
-  const moreLinks = [
-    "Development & IT",
-    "Design & Creative",
-    "Sales & Marketing",
-    "Admin & Customer Support",
-    "More",
-  ];
+
   return (
     <div>
       <div className={headerStyles.mainHeader}>
@@ -47,8 +42,8 @@ export default function SiteHeader({ children }: Props): JSX.Element {
       </div>
       <div className={headerStyles.subMain}>
         <ul className={headerStyles.moreList}>
-          {moreLinks.map((link) => (
-            <li key={link}>{link}</li>
+          {categories.map((category) => (
+            <li key={category}>{category}</li>
           ))}
         </ul>
       </div>

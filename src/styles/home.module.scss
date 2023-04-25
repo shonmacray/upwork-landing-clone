@@ -1,10 +1,15 @@
 @import "./sample.module.scss";
 $hero-yp: 1rem;
-$space-big: 1.8rem;
+$space-big: 2rem;
 $container-px: 5rem;
 $heading: 2.8rem;
 %pb {
   padding-bottom: 1.5rem;
+}
+%heading {
+  font-size: $heading;
+  font-family: $upwork-sans;
+  line-height: $heading;
 }
 .container {
   padding-left: $container-px;
@@ -60,8 +65,8 @@ $heading: 2.8rem;
 }
 .sections {
   @include flex;
-  padding-top: $space-big;
-  padding-bottom: $space-big;
+  margin-top: $space-big;
+  margin-bottom: $space-big;
   align-items: center;
   .sectionOne {
     width: 40%;
@@ -71,9 +76,7 @@ $heading: 2.8rem;
   }
   .sectionTwo {
     h1 {
-      font-size: $heading;
-      font-family: $upwork-sans;
-      line-height: $heading;
+      @extend %heading;
       @extend %bold;
     }
     .btnContainer {
@@ -81,7 +84,57 @@ $heading: 2.8rem;
     }
   }
 }
-
 .separatorX {
   width: 2rem;
+}
+
+.sectionThree {
+  margin-top: $space-big;
+  margin-bottom: $space-big;
+  .looking {
+    color: #5e6d55;
+    @extend %semi-bold;
+    margin-top: 0.7rem;
+  }
+  h1 {
+    font-size: $heading;
+    font-family: $upwork-sans;
+    @extend %bold;
+    line-height: 3rem;
+  }
+  .categories {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+    .category {
+      background-color: #f8faf7;
+      height: 9rem;
+      padding: 1rem 2rem;
+      border-radius: 6px;
+      //   width: 25%;
+      p {
+        font-size: 1.5rem;
+        @extend %semi-bold;
+      }
+      .more {
+        @include flex;
+        align-items: center;
+        width: 70%;
+        justify-content: $justify-between;
+        margin-top: 1rem;
+        color: #5e6d55;
+        .withIcon {
+          @include flex;
+          align-items: center;
+        }
+      }
+      .icon {
+        color: $primary-color;
+      }
+    }
+  }
 }

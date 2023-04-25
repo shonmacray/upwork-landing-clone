@@ -5,6 +5,9 @@ import ListWithIcon from "@/components/ListWithIcon";
 import { BiEdit } from "react-icons/bi";
 import { TiPinOutline } from "react-icons/ti";
 import { RiShieldStarLine } from "react-icons/ri";
+import { AiFillStar } from "react-icons/ai";
+
+import { categories } from "@/utils";
 
 const inter = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -50,6 +53,25 @@ export default function Home() {
             <div className={homeStyles.separatorX} />
             <AppButton label="Learn how to hire" type="outline" />
           </div>
+        </div>
+      </div>
+      <div className={homeStyles.sectionThree}>
+        <h1>Browse talent by category</h1>
+        <p className={homeStyles.looking}>
+          Looking for work? <span>Browse jobs</span>
+        </p>
+        <div className={homeStyles.categories}>
+          {categories.map((category) => (
+            <div className={homeStyles.category} key={category}>
+              <p>{category}</p>
+              <div className={homeStyles.more}>
+                <div className={homeStyles.withIcon}>
+                  <AiFillStar className={homeStyles.icon} /> 4.56/5
+                </div>
+                <div>453 skills</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </main>

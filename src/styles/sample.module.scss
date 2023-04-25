@@ -31,6 +31,9 @@ $upwork-sans: "Times New Roman", Times, serif !important;
 %bold {
   font-weight: 600;
 }
+%semi-bold {
+  font-weight: 500;
+}
 .mainHeader {
   border-bottom: 1px solid $border-color;
   @include flex(row, $justify-between);
