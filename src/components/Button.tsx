@@ -1,4 +1,4 @@
-import headerStyles from "../styles/sample.module.scss";
+import headerStyles from "../styles/root.module.scss";
 interface Props {
   right?: JSX.Element;
   label: string;

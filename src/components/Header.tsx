@@ -1,4 +1,4 @@
-import headerStyles from "../styles/sample.module.scss";
+import headerStyles from "../styles/root.module.scss";
 import { FiSearch } from "react-icons/fi";
 import { HiChevronDown } from "react-icons/hi";
 import { SiUpwork } from "react-icons/si";

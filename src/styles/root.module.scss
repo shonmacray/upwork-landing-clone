@@ -66,9 +66,9 @@ $upwork-sans: "Cardo" !important;
 .siteBrand {
   @extend %space-r;
   @extend %bold;
+  @include flex(row);
   font-size: 1.4rem;
   color: $primary-color;
-  @include flex(row);
   align-items: center;
   h1 {
     margin-top: -7px;
