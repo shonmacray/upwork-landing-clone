@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Preview site - https://upwork-landing-clone.vercel.app/
+
 clone the repo
 
 In the dir, run
