@@ -3,5 +3,8 @@ export const categories = [
     "Design & Creative",
     "Sales & Marketing",
     "Admin & Customer Support",
-    "More",
+    "Writing & Translation",
+    "Finance & Accounting",
+    "Engineering & Architecture",
+    "Legal",
 ];

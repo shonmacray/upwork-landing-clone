@@ -48,9 +48,16 @@ $upwork-sans: "Times New Roman", Times, serif !important;
   position: fixed;
   width: 100%;
   background-color: #fff;
+  z-index: 999;
 }
 .subMain {
   @extend %space-x;
+  ul {
+    :last-child {
+      @include flex();
+      align-items: center;
+    }
+  }
 }
 .branding {
   @include flex;
@@ -115,6 +122,9 @@ $upwork-sans: "Times New Roman", Times, serif !important;
   padding-left: 1rem;
   padding-right: 1rem;
   @extend %bold;
+}
+.btn:hover {
+  opacity: 0.9;
 }
 .btnPrimary {
   background-color: $primary-color;

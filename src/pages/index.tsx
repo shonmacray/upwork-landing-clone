@@ -1,18 +1,33 @@
-import { Kumbh_Sans } from "next/font/google";
 import homeStyles from "../styles/home.module.scss";
 import AppButton from "@/components/Button";
 import ListWithIcon from "@/components/ListWithIcon";
 import { BiEdit } from "react-icons/bi";
 import { TiPinOutline } from "react-icons/ti";
 import { RiShieldStarLine } from "react-icons/ri";
-import { AiFillStar } from "react-icons/ai";
-
+import { HiOutlineWrenchScrewdriver } from "react-icons/hi2";
+import {
+  HiOutlineBriefcase,
+  HiArrowRight,
+  HiStar,
+  HiCurrencyDollar,
+  HiCheckCircle,
+} from "react-icons/hi";
+import { MdHeadsetMic, MdStars } from "react-icons/md";
+import { BsAward } from "react-icons/bs";
+import {
+  RiFacebookFill,
+  RiLinkedinFill,
+  RiTwitterFill,
+  RiYoutubeFill,
+  RiInstagramFill,
+  RiAppleFill,
+  RiAndroidFill,
+} from "react-icons/ri";
 import { categories } from "@/utils";
 import ListWithIcon2 from "@/components/ListWithIcon2";
 import Card from "@/components/Card";
 import SiteHeader from "@/components/Header";
-
-const inter = Kumbh_Sans({ subsets: ["latin"] });
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -37,13 +52,40 @@ export default function Home() {
             <AppButton label="Get Started" type="covered" />
             <div className={homeStyles.trust}>
               <p>Trusted by</p>
+              <ul>
+                <Image
+                  className={homeStyles.image}
+                  alt="one"
+                  src="/microsoft.svg"
+                  height="80"
+                  width="100"
+                />
+                <Image
+                  className={homeStyles.image}
+                  alt="one"
+                  src="/airbnb.svg"
+                  height="50"
+                  width="80"
+                />
+                <Image
+                  className={homeStyles.image}
+                  alt="one"
+                  src="/bissell.svg"
+                  height="60"
+                  width="60"
+                />
+              </ul>
             </div>
           </div>
-          <div></div>
+          <div>
+            <Image alt="one" src="/globe@2x.jpg" height="400" width="400" />
+          </div>
         </div>
 
         <div className={homeStyles.sections}>
-          <div className={homeStyles.sectionOne}></div>
+          <div className={homeStyles.sectionOne}>
+            <Image alt="one" src="/s.png" height="1000" width="800" />
+          </div>
           <div className={homeStyles.separatorX} />
           <div className={homeStyles.sectionTwo}>
             <h1>Up your work game, it’s free.</h1>
@@ -81,7 +123,7 @@ export default function Home() {
                 <p>{category}</p>
                 <div className={homeStyles.more}>
                   <div className={homeStyles.withIcon}>
-                    <AiFillStar className={homeStyles.icon} /> 4.56/5
+                    <HiStar className={homeStyles.icon} /> 4.56/5
                   </div>
                   <div>453 skills</div>
                 </div>
@@ -103,21 +145,23 @@ export default function Home() {
             </p>
             <div className={homeStyles.listContainer}>
               <div className={homeStyles.listWithIcon}>
-                <RiShieldStarLine size={22} color="#91e6b3" />
+                <HiOutlineWrenchScrewdriver size={22} color="#91e6b3" />
                 <p>Access expert talent to fill your skill gaps</p>
               </div>
               <div className={homeStyles.listWithIcon}>
-                <BiEdit size={22} color="#91e6b3" />
+                <HiOutlineBriefcase size={22} color="#91e6b3" />
                 <p>Control your workflow: hire, classify and pay your talent</p>
               </div>
               <div className={homeStyles.listWithIcon}>
-                <TiPinOutline size={22} color="#91e6b3" />
+                <MdHeadsetMic size={22} color="#91e6b3" />
                 <p>Partner with Upwork for end-to-end support</p>
               </div>
             </div>
             <AppButton type="green" label="Learn more" />
           </div>
-          <div className={homeStyles.image2}></div>
+          <div className={homeStyles.image2}>
+            <Image alt="one" src="/sw.jpg" height="400" width="525" />
+          </div>
         </div>
         <div className={homeStyles.space1} />
         <div className={homeStyles.forClients}>
@@ -134,15 +178,15 @@ export default function Home() {
               <div className={homeStyles.card1}>
                 <h1>Post a job and hire a pro</h1>
                 <div className={homeStyles.iconContainer}>
-                  <p>Talent Marketplace</p>
-                  <AiFillStar className={homeStyles.icon} size={23} />
+                  <p>Talent Marketplace &trade;</p>
+                  <HiArrowRight className={homeStyles.icon} size={23} />
                 </div>
               </div>
               <div className={homeStyles.card1}>
                 <h1>Browse and buy projects</h1>
                 <div className={homeStyles.iconContainer}>
-                  <p>Talent Marketplace</p>
-                  <AiFillStar className={homeStyles.icon} />
+                  <p>Talent Marketplace &trade;</p>
+                  <HiArrowRight className={homeStyles.icon} size={23} />
                 </div>
               </div>
               <div className={homeStyles.card1}>
@@ -150,32 +194,40 @@ export default function Home() {
                   Let us help you find the right talent
                 </h1>
                 <div className={homeStyles.iconContainer}>
-                  <p>Talent Marketplace</p>
-                  <AiFillStar className={homeStyles.icon} />
+                  <p>Talent Marketplace &trade;</p>
+                  <HiArrowRight className={homeStyles.icon} size={23} />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className={homeStyles.space1} />
+        <div className={homeStyles.space} />
+        <div className={homeStyles.space} />
         <div className={homeStyles.why}>
+          <Image
+            alt="one"
+            src="/se.png"
+            height="365"
+            width="365"
+            className={homeStyles.imageInner}
+          />
           <div className={homeStyles.inner}>
             <div className={homeStyles.left}>
               <h1 className={homeStyles.h1}>Why businesses turn to Upwork</h1>
               <ListWithIcon2
                 title="Proof of quality"
                 subTitle="Check any pro’s work samples, client reviews, and identity verification."
-                icon={<RiShieldStarLine size={26} />}
+                icon={<MdStars size={26} />}
               />
               <ListWithIcon2
                 title="No cost until you hire"
                 subTitle="Interview potential fits for your job, negotiate rates, and only pay for work you approve."
-                icon={<RiShieldStarLine size={26} />}
+                icon={<HiCurrencyDollar size={26} />}
               />
               <ListWithIcon2
                 title="Safe and secure"
                 subTitle="Focus on your work knowing we help protect your data and privacy. We’re here with 24/7 support if you need it."
-                icon={<RiShieldStarLine size={26} />}
+                icon={<HiCheckCircle size={26} />}
               />
             </div>
             <div className={homeStyles.right}>
@@ -188,13 +240,13 @@ export default function Home() {
                   light
                   title="4.9/5"
                   subTitle="Clients rate professionals on Upwork"
-                  icon={<AiFillStar size={50} />}
+                  icon={<HiStar size={50} />}
                 />
                 <ListWithIcon2
                   light
                   title="Award winner"
                   subTitle="G2’s 2021 Best Software Awards"
-                  icon={<RiShieldStarLine size={50} />}
+                  icon={<BsAward size={50} />}
                 />
               </div>
             </div>
@@ -202,7 +254,9 @@ export default function Home() {
         </div>
         <div className={homeStyles.space1} />
         <div className={homeStyles.forTalent}>
-          <div className={homeStyles.talentLeft}></div>
+          <div className={homeStyles.talentLeft}>
+            <Image alt="one" src="/sx.jpg" height="365" width="670" />
+          </div>
           <div className={homeStyles.talentRight}>
             <div>
               <h4>For talent</h4>
@@ -230,19 +284,57 @@ export default function Home() {
             <Card
               title="“Upwork enables us to differentiate ourselves from our competitors and produce content at a higher caliber.”"
               subTitle="Josh Machiz, Chief Digital Officer"
-              icon={<div>as</div>}
+              icon={
+                <Image
+                  alt="one"
+                  src="/nasdaq-light.svg"
+                  height="180"
+                  width="180"
+                />
+              }
             />
             <Card
               title="“One of the advantages of utilizing freelancers is finding talent with different skills quickly as our needs change.”"
               subTitle="Carol Taylor, Director of Content Experience"
-              icon={<div>as</div>}
+              icon={
+                <Image
+                  alt="one"
+                  src="/microsoft-lg-light.svg"
+                  height="180"
+                  width="180"
+                />
+              }
               num={2}
             />
             <div className={homeStyles.card2}>
-              <div className={homeStyles.one}>dd</div>
+              <div className={homeStyles.one} />
               <div className={homeStyles.two}>
                 <h4>And many more</h4>
-                <h4>icon</h4>
+                <Image
+                  alt="one"
+                  src="/nasdaq-light.svg"
+                  height="120"
+                  width="120"
+                />
+                <Image
+                  alt="one"
+                  src="/automattic-light.svg"
+                  height="100"
+                  width="190"
+                />
+                <Image
+                  alt="one"
+                  src="/bissell-light.svg"
+                  height="60"
+                  width="60"
+                />
+                <Image alt="one" src="/coty-light.svg" height="80" width="80" />
+                <Image
+                  alt="one"
+                  src="/rancher-v2-light.svg"
+                  height="80"
+                  width="80"
+                />
               </div>
             </div>
           </div>
@@ -362,12 +454,33 @@ export default function Home() {
             </div>
           </div>
           <div className={homeStyles.follow}>
-            <div>
+            <ul>
               <p>Follow Us</p>
-            </div>
-            <div>
+              <li>
+                <RiFacebookFill />
+              </li>
+              <li>
+                <RiLinkedinFill />
+              </li>
+              <li>
+                <RiTwitterFill />
+              </li>
+              <li>
+                <RiYoutubeFill />
+              </li>
+              <li>
+                <RiInstagramFill />
+              </li>
+            </ul>
+            <ul>
               <p>Mobile App</p>
-            </div>
+              <li>
+                <RiAppleFill />
+              </li>
+              <li>
+                <RiAndroidFill />
+              </li>
+            </ul>
           </div>
           <div className={homeStyles.last}>
             <ul>

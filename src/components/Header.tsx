@@ -38,9 +38,12 @@ export default function SiteHeader(): JSX.Element {
       </div>
       <div className={headerStyles.subMain}>
         <ul className={headerStyles.moreList}>
-          {categories.map((category) => (
+          {categories.slice(0, 4).map((category) => (
             <li key={category}>{category}</li>
           ))}
+          <li>
+            More <HiChevronDown />
+          </li>
         </ul>
       </div>
     </div>

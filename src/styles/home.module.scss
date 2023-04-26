@@ -46,6 +46,12 @@ $heading: 2.8rem;
     color: #9aaa97;
     @extend %bold;
   }
+  ul {
+    @include flex();
+    .image {
+      margin-right: 2rem;
+    }
+  }
 }
 // another one
 
@@ -92,8 +98,6 @@ $heading: 2.8rem;
   align-items: center;
   .sectionOne {
     width: 40%;
-    height: 26rem;
-    background-color: $border-color;
     border-radius: 6px;
   }
   .sectionTwo {
@@ -116,6 +120,10 @@ $heading: 2.8rem;
     color: #5e6d55;
     @extend %semi-bold;
     margin-top: 0.7rem;
+    span {
+      color: $primary-color;
+      text-decoration: underline;
+    }
   }
   h1 {
     font-size: $heading;
@@ -125,7 +133,7 @@ $heading: 2.8rem;
   }
   .categories {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 24% 24% 24% 24%;
     grid-template-rows: auto;
     gap: 20px;
     flex-wrap: wrap;
@@ -136,7 +144,6 @@ $heading: 2.8rem;
       height: 9rem;
       padding: 1rem 2rem;
       border-radius: 6px;
-      //   width: 25%;
       p {
         font-size: 1.5rem;
         @extend %semi-bold;
@@ -157,6 +164,10 @@ $heading: 2.8rem;
         color: $primary-color;
       }
     }
+    :hover {
+      background-color: #d5e0d5;
+      cursor: pointer;
+    }
   }
 }
 
@@ -164,6 +175,7 @@ $heading: 2.8rem;
   background: #12544e;
   border-radius: 6px;
   height: 38rem;
+  overflow: hidden;
   @extend %container-margin;
   @include flex;
   .image2 {
@@ -211,7 +223,8 @@ $heading: 2.8rem;
 }
 
 .forClients {
-  background-color: #5e6d55;
+  background-image: url("/ba.jpg");
+  background-size: contain;
   padding: 2rem;
   border-radius: 6px;
   height: 40rem;
@@ -277,6 +290,12 @@ $heading: 2.8rem;
 
 .why {
   @extend %container-margin;
+  position: relative;
+  .imageInner {
+    position: absolute;
+    left: 46%;
+    top: -3rem;
+  }
   .inner {
     @include flex;
     justify-content: $justify-between;
@@ -316,6 +335,8 @@ $heading: 2.8rem;
 .forTalent {
   @include flex();
   @extend %container-margin;
+  overflow: hidden;
+  border-radius: 6px;
   .talentLeft {
     width: 50%;
     height: 42rem;
@@ -418,16 +439,19 @@ $heading: 2.8rem;
   width: 37rem;
   height: 28rem;
   border-radius: 6px;
+  overflow: hidden;
   @include flex();
   .one {
     width: 45%;
-    padding: 2rem;
+    background-image: url("/ca.jpg");
+    background-size: contain;
   }
   .two {
     width: 55%;
     padding: 2rem 3rem;
     font-size: 1.2rem;
     @extend %semi-bold;
+    @include flex(column, $justify-between);
   }
 }
 .support {
@@ -498,6 +522,23 @@ $heading: 2.8rem;
   .follow {
     @include flex(row, $justify-between);
     @extend %bold;
+    ul {
+      @include flex();
+      align-items: center;
+      li {
+        border: 1px solid #f2f7f2;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50px;
+        @include flex(row);
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.3rem;
+      }
+      p {
+        margin-right: 1rem;
+      }
+    }
   }
   .last {
     border-top: 1px solid #f8faf7;
