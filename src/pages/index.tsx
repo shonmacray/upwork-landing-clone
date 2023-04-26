@@ -262,14 +262,124 @@ export default function Home() {
         <div className={homeStyles.space} />
         <div className={homeStyles.space} />
         <div className={homeStyles.skillList}>
-          <div>
+          <div className={homeStyles.sleft}>
             <h1>Top skills</h1>
             <h1>Trending skills</h1>
             <h1>Top skills in US</h1>
             <h1>Project CatalogTM</h1>
           </div>
-          <div></div>
+          <div className={homeStyles.sright}>
+            <ul>
+              <li>Data Entry Specialists</li>
+              <li>Video Editors</li>
+              <li>Data Analyst</li>
+              <li>Shopify Developer</li>
+              <li>Ruby on Rails Developer</li>
+              <li>Android Developer</li>
+              <li>Bookkeeper</li>
+              <li>Content Writer</li>
+              <li>Copywriter</li>
+              <li>Database Administrator</li>
+              <li>Data Scientist</li>
+              <li>Front-End Developer</li>
+              <li>Game Developer</li>
+              <li>Graphic Designer</li>
+              <li>iOS Developer</li>
+              <li>Java Developer</li>
+              <li>JavaScript Developer</li>
+              <li>Logo Designer</li>
+              <li>Mobile App Developer</li>
+              <li>PHP Developer</li>
+              <li>Python Developer</li>
+              <li>Resume Writer</li>
+              <li>SEO Expert</li>
+              <li>Social Media Manager</li>
+              <li>Software Developer</li>
+              <li>Software Engineer</li>
+              <li>Technical Writer</li>
+              <li>UI Designer</li>
+              <li>UX Designer</li>
+              <li>Virtual Assistant</li>
+              <li>Web Designer</li>
+              <li>Wordpress Developer</li>
+            </ul>
+          </div>
         </div>
+        <div className={homeStyles.space} />
+        <div className={homeStyles.space} />
+        <footer className={homeStyles.footer}>
+          <div className={homeStyles.links}>
+            <div>
+              <p>For Clients</p>
+              <ul>
+                <li>How to Hire</li>
+                <li>Talent Marketplace</li>
+                <li>Project Catalog</li>
+                <li>Talent Scout</li>
+                <li>Hire an Agency</li>
+                <li>Enterprise</li>
+                <li>Payroll Services</li>
+                <li>Direct Contracts</li>
+                <li>Hire Worldwide</li>
+                <li>Hire in the USA</li>
+              </ul>
+            </div>
+            <div>
+              <p>For Talent</p>
+              <ul>
+                <li>How to Find Work</li>
+                <li>Direct Contracts</li>
+                <li>Find Freelance Jobs Worldwide</li>
+                <li>Find Freelance Jobs in the USA</li>
+              </ul>
+            </div>
+            <div>
+              <p>Resources</p>
+              <ul>
+                <li>Help & Support</li>
+                <li>Success Stories</li>
+                <li>Upwork Reviews</li>
+                <li>Resources</li>
+                <li>Blog</li>
+                <li>Community</li>
+                <li>Affiliate Program</li>
+                <li>Free Business tools</li>
+              </ul>
+            </div>
+            <div>
+              <p>Company</p>
+              <ul>
+                <li>About Us</li>
+                <li>Leadership</li>
+                <li>Investor Relations</li>
+                <li>Careers</li>
+                <li>Our Impact</li>
+                <li>Press</li>
+                <li>Contact Us</li>
+                <li>Trust, Safety & Security</li>
+                <li>Modern Slavery Statement</li>
+              </ul>
+            </div>
+          </div>
+          <div className={homeStyles.follow}>
+            <div>
+              <p>Follow Us</p>
+            </div>
+            <div>
+              <p>Mobile App</p>
+            </div>
+          </div>
+          <div className={homeStyles.last}>
+            <ul>
+              <p>© 2015 - 2023 Upwork® Global Inc.</p>
+              <p>Terms of Service</p>
+              <p>Privacy Policy</p>
+              <p>CA Notice at Collection</p>
+              <p>Cookie Settings</p>
+              <p>Accessibility</p>
+            </ul>
+          </div>
+        </footer>
       </main>
     </>
   );
