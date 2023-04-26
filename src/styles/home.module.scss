@@ -197,7 +197,7 @@ $heading: 2.8rem;
     margin-bottom: 2rem;
   }
   h1 {
-    font-size: 4rem;
+    font-size: 3.6rem;
     font-family: $upwork-sans;
     line-height: 3.8rem;
     width: 79%;
@@ -378,7 +378,7 @@ $heading: 2.8rem;
   background-color: #12544e;
   color: #f8faf7;
   width: 37rem;
-  height: 28rem;
+  height: 30rem;
   border-radius: 6px;
   padding: 2rem;
   @include flex(column);
@@ -433,11 +433,14 @@ $heading: 2.8rem;
   gap: 2rem;
   overflow-x: scroll;
 }
+.slider::-webkit-scrollbar {
+  display: none;
+}
 .card2 {
   background-color: #011e00;
   color: #f8faf7;
   width: 37rem;
-  height: 28rem;
+  height: 30rem;
   border-radius: 6px;
   overflow: hidden;
   @include flex();
@@ -484,6 +487,9 @@ $heading: 2.8rem;
   }
   .sleft {
     width: 40%;
+  }
+  .sleftSelected {
+    color: $primary-color;
   }
   .sright {
     width: 60%;

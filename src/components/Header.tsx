@@ -1,6 +1,7 @@
 import headerStyles from "../styles/sample.module.scss";
 import { FiSearch } from "react-icons/fi";
 import { HiChevronDown } from "react-icons/hi";
+import { SiUpwork } from "react-icons/si";
 import AppButton from "./Button";
 import { categories } from "@/utils";
 
@@ -11,7 +12,9 @@ export default function SiteHeader(): JSX.Element {
     <div className={headerStyles.header}>
       <div className={headerStyles.mainHeader}>
         <div className={headerStyles.branding}>
-          <h1 className={headerStyles.siteBrand}>Upwork</h1>
+          <div className={headerStyles.siteBrand}>
+            <SiUpwork size={30} /> <h1>work</h1>
+          </div>
           <div>
             <ul className={headerStyles.list}>
               {mainLinks.map((link) => (

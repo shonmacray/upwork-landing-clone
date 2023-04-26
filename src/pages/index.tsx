@@ -355,7 +355,7 @@ export default function Home() {
         <div className={homeStyles.space} />
         <div className={homeStyles.skillList}>
           <div className={homeStyles.sleft}>
-            <h1>Top skills</h1>
+            <h1 className={homeStyles.sleftSelected}>Top skills</h1>
             <h1>Trending skills</h1>
             <h1>Top skills in US</h1>
             <h1>Project CatalogTM</h1>

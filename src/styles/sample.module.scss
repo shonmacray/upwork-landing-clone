@@ -7,7 +7,7 @@ $primary-color: #14a900;
 $text-color: #011e00;
 $justify-between: space-between;
 $justify-center: center;
-$upwork-sans: "Times New Roman", Times, serif !important;
+$upwork-sans: "Cardo" !important;
 
 @mixin flex($flex: row, $justify: "") {
   display: flex;
@@ -65,10 +65,14 @@ $upwork-sans: "Times New Roman", Times, serif !important;
 }
 .siteBrand {
   @extend %space-r;
-  font-size: x-large;
-  color: $primary-color;
-  font-family: $upwork-sans;
   @extend %bold;
+  font-size: 1.4rem;
+  color: $primary-color;
+  @include flex(row);
+  align-items: center;
+  h1 {
+    margin-top: -7px;
+  }
 }
 .list {
   @include flex;
